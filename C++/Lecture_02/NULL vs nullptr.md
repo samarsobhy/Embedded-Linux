@@ -5,6 +5,7 @@ Definition: NULL is a macro defined in several standard libraries (like <cstddef
 Type: NULL is typically defined as 0 or (void*)0.
 Usage: It can be used to represent a null pointer value in C and C++.
 Type Safety: NULL lacks type safety. Since it is usually defined as 0, it can lead to ambiguous situations and unintended type conversions, especially in function overloads.
+
 **nullptr**
 Definition: nullptr is a keyword introduced in C++11.
 Type: nullptr is of type std::nullptr_t.
