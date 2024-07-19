@@ -18,6 +18,7 @@ Consider the following function overloads:
 
 void func(int);
 void func(char*);
+
 If you call func(NULL), the compiler might get confused because NULL is defined as 0, which can be implicitly converted to an int, causing func(int) to be called instead of func(char*).
 
 However, if you use func(nullptr), there is no ambiguity because nullptr is specifically a null pointer constant of type std::nullptr_t, so func(char*) will be called.
@@ -38,7 +39,9 @@ void func(char*) {
 int main() 
 {
     func(NULL);    // Ambiguous call, might call func(int) or func(char*)
+    
     func(nullptr); // Unambiguous call, will call func(char*)
+    
     return 0;
 }
 
