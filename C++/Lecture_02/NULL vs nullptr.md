@@ -34,7 +34,8 @@ void func(char*) {
     std::cout << "Called func(char*)\n";
 }
 
-int main() {
+int main() 
+{
     func(NULL);    // Ambiguous call, might call func(int) or func(char*)
     func(nullptr); // Unambiguous call, will call func(char*)
     return 0;
@@ -44,5 +45,6 @@ int main() {
 Type Safety: nullptr is type-safe and preferred in modern C++ code, whereas NULL can lead to ambiguous situations due to its definition as 0.
 Function Overloading: Using nullptr helps avoid ambiguity in function overload resolution, while NULL can lead to unexpected behavior.
 Templates: nullptr works better with templates, reducing the risk of errors due to type conversion.
-Recommendation
+
+**Recommendation**
 In modern C++ (C++11 and later), it is recommended to use nullptr instead of NULL for null pointer constants to take advantage of type safety and avoid potential issues with function overloading and template instantiation.
