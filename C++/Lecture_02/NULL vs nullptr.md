@@ -17,6 +17,7 @@ Type Safety: nullptr is type-safe. It does not implicitly convert to integers or
 Consider the following function overloads:
 
 void func(int);
+
 void func(char*);
 
 If you call func(NULL), the compiler might get confused because NULL is defined as 0, which can be implicitly converted to an int, causing func(int) to be called instead of func(char*).
@@ -28,16 +29,19 @@ Here's an example to illustrate the differences:
 
 #include <iostream>
 
-void func(int) {
+void func(int) 
+{
     std::cout << "Called func(int)\n";
 }
 
-void func(char*) {
+void func(char*) 
+{
     std::cout << "Called func(char*)\n";
 }
 
 int main() 
 {
+
     func(NULL);    // Ambiguous call, might call func(int) or func(char*)
     
     func(nullptr); // Unambiguous call, will call func(char*)
