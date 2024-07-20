@@ -1,6 +1,7 @@
 #include <iostream>
 
-int main() {
+int main() 
+{
     std::string input;
     int sum = 0;
 
