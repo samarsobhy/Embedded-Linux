@@ -13,6 +13,5 @@ int main()
         printf("%c | %d\n", isprint(i) ? i : ' ', i); 
     }
 
-
     return 0;
 }
