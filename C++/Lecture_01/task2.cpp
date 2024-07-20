@@ -1,5 +1,5 @@
-
 #include <iostream>
+
 int main ()
 {
     int num1 = 0;
@@ -24,7 +24,6 @@ int main ()
     } 
     else if (num1 > num3) 
     {
-
         max = num1;
     }
     else
