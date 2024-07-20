@@ -12,12 +12,13 @@ int main()
     std::cout << "Enter choice (1 or 2): ";
     std::cin >> choice;
 
-    if (choice == 1) {
+    if (choice == 1) 
+    {
         // Decimal to Binary
         std::cout << "Enter a decimal number: ";
         int decimalNumber;
         std::cin >> decimalNumber;
-        if (!std::isdigit(decimalNumber))
+        if ( ! std::isdigit(decimalNumber))
         {
             std::cout << "Invalid input. Only non-negative integers are allowed." << std::endl;
         }
@@ -50,7 +51,7 @@ int main()
                 std::cout << "Invalid binary number. Only '0' and '1' are allowed" << std::endl;
                 is_decimalNumber = -1; // Return -1 to indicate an error
                break;
-           2 }
+            }
             base *= 2; // Move to the next bit
         }
 
